@@ -428,26 +428,26 @@
         
         /* Kain documents styling */
         .kain-document {
-            border-color: #ff3300;
-            box-shadow: 0 4px 15px rgba(255, 51, 0, 0.3);
+            border-color: #ff8800;
+            box-shadow: 0 4px 15px rgba(255, 136, 0, 0.3);
         }
         
         .kain-document:hover {
-            box-shadow: 0 8px 25px rgba(255, 51, 0, 0.5);
-            border-color: #ff6600;
+            box-shadow: 0 8px 25px rgba(255, 136, 0, 0.5);
+            border-color: #ffaa00;
         }
         
         .kain-document .document-header {
-            background: linear-gradient(135deg, #ff3300, #ff6600);
-            border-bottom-color: #ff3300;
+            background: linear-gradient(135deg, #ff8800, #ffaa00);
+            border-bottom-color: #ff8800;
         }
         
         .kain-document .document-meta {
-            border-top-color: rgba(255, 51, 0, 0.3);
+            border-top-color: rgba(255, 136, 0, 0.3);
         }
         
         .kain-document .document-status {
-            color: #ff3300;
+            color: #ff8800;
         }
         
         .document-content {
@@ -574,6 +574,18 @@
             100% { transform: translate(0); }
         }
         
+
+        
+        .frozen-text {
+            animation: freeze-glitch 0.2s ease-out forwards;
+        }
+        
+        @keyframes freeze-glitch {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(2px, -2px) rotate(2deg); }
+            100% { transform: translate(0, 0) rotate(0deg); filter: blur(0.5px); }
+        }
+        
         .flash-red {
             animation: red-flash 0.1s;
         }
@@ -675,102 +687,68 @@
             <div class="document-grid">
                 <div class="document" onclick="openDocument('doc1')">
                     <div class="document-header">
-                        <div class="document-icon">📄</div>
-                        <div class="document-title">PROJECT_DEEPNOISE.txt</div>
-                        <div class="document-type">Text Document</div>
+                        <div class="document-icon">👥</div>
+                        <div class="document-title">OPERATION_NEW_HOPE.dat</div>
+                        <div class="document-type">Personnel File</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            Секретные исследования по манипуляции инфразвуковыми частотами для психологической войны. Содержит экспериментальные данные по подавлению памяти и методам модификации поведения.
+                            Засекреченный список личностей, связанных с операцией "Новая Надежда". Содержит статус агентов и связь с делом "Фрактал" и проектом "Аватар".
                         </div>
                         <div class="document-meta">
-                            <span class="document-classification">TOP SECRET</span>
-                            <span>1987-03-15</span>
+                            <span class="document-classification">CLASSIFIED</span>
+                            <span class="error-text">DATE CORRUPTED</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="document" onclick="openDocument('doc2')">
                     <div class="document-header">
-                        <div class="document-icon">🔬</div>
-                        <div class="document-title">EXPERIMENT_LOG_447.dat</div>
-                        <div class="document-type">Data File</div>
+                        <div class="document-icon">👁️</div>
+                        <div class="document-title">SURVEILLANCE_ZONE_B17.log</div>
+                        <div class="document-type">Observation Log</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            Подробный журнал экспериментов, проведенных над Субъектом #447. Содержит хронологию проявлений аномального поведения и протоколы содержания.
+                            Журнал наблюдения за зоной B-17. Зафиксирован неизвестный субъект с аномальным поведением. Возможная связь с проектом "Легион".
                         </div>
                         <div class="document-meta">
-                            <span class="document-classification">CONFIDENTIAL</span>
-                            <span>1989-11-22</span>
+                            <span class="document-classification">URGENT</span>
+                            <span>03:12-03:29</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="document" onclick="openDocument('doc3')">
                     <div class="document-header">
-                        <div class="document-icon">👁️</div>
-                        <div class="document-title">SURVEILLANCE_REPORT_X.enc</div>
-                        <div class="document-type">Encrypted File</div>
+                        <div class="document-icon">🗂️</div>
+                        <div class="document-title">FRACTAL_CASE_REQUEST.enc</div>
+                        <div class="document-type">Archive Request</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            Отчет полевого наблюдения об электромагнитных аномалиях в жилом районе "CIRCLE". Содержит показания свидетелей и документацию происшествий.
+                            Запрос агента "Циркуль" на получение архивных материалов по делу "Фрактал". Доступ ограничен, требуется допуск Куратора Архива.
                         </div>
                         <div class="document-meta">
-                            <span class="document-classification">ULTRA SECRET</span>
-                            <span>1991-07-04</span>
+                            <span class="document-classification">INTERNAL USE</span>
+                            <span class="error-text">DATA CLASSIFIED</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="document" onclick="openDocument('doc4')">
                     <div class="document-header">
-                        <div class="document-icon">🚨</div>
-                        <div class="document-title">INCIDENT_REPORT_BLACK.log</div>
-                        <div class="document-type">Log File</div>
+                        <div class="document-icon">📋</div>
+                        <div class="document-title">LEAVE_REQUEST_CIRCLE.txt</div>
+                        <div class="document-type">Official Document</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            Экстренный отчет о катастрофическом нарушении изоляции в Объекте 7. Содержит списки жертв и хронологию событий.
+                            Заявление агента "Циркуль" на временный отпуск для проведения самостоятельного расследования. Статус: ВНЕ АКТИВНОЙ СЛУЖБЫ.
                         </div>
                         <div class="document-meta">
-                            <span class="document-classification">EYES ONLY</span>
-                            <span>1993-12-31</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="document" onclick="openDocument('doc5')">
-                    <div class="document-header">
-                        <div class="document-icon">💀</div>
-                        <div class="document-title">TERMINATION_ORDER.cmd</div>
-                        <div class="document-type">Command File</div>
-                    </div>
-                    <div class="document-body">
-                        <div class="document-preview">
-                            Исполнительный приказ о немедленной ликвидации всего персонала Проекта DeepNoise. Содержит коды авторизации и процедуры устранения.
-                        </div>
-                        <div class="document-meta">
-                            <span class="document-classification">BURN AFTER READING</span>
-                            <span>1995-06-18</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="document" onclick="openDocument('doc6')">
-                    <div class="document-header">
-                        <div class="document-icon">🎵</div>
-                        <div class="document-title">FINAL_TRANSMISSION.wav</div>
-                        <div class="document-type">Audio File</div>
-                    </div>
-                    <div class="document-body">
-                        <div class="document-preview">
-                            Последняя записанная передача из Объекта 7 перед полным отключением связи. Содержит тревожные аудиодоказательства аномальной активности.
-                        </div>
-                        <div class="document-meta">
-                            <span class="document-classification">UNKNOWN</span>
-                            <span class="error-text">TIMESTAMP CORRUPTED</span>
+                            <span class="document-classification">PAX INTERNAL</span>
+                            <span class="document-status">APPROVED</span>
                         </div>
                     </div>
                 </div>
@@ -780,157 +758,130 @@
         <!-- Document Content Windows -->
         <div class="document-content" id="doc1Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>PROJECT_DEEPNOISE.txt</h2>
+            <h2>OPERATION_NEW_HOPE.dat</h2>
             <pre>
-СЕКРЕТНЫЙ ДОКУМЕНТ - СОВЕРШЕННО СЕКРЕТНО
-ПРОЕКТ DEEPNOISE - ОТЧЕТ ФАЗЫ III
-ДАТА: 1987-03-15
-АВТОР: Доктор <span class="redacted">█████████</span>
+ОПЕРАЦИЯ "НОВАЯ НАДЕЖДА" - СПИСОК ЛИЧНОСТЕЙ
+Дата: <span class="error-text">[ОТКРЫТЬ ДАННЫЕ НЕВОЗМОЖНО]</span>
+Автор: Агент "Циркуль". Маркус <span class="redacted">[ДАННЫЕ ЗАСЕКРЕЧЕНЫ]</span>
 
-АННОТАЦИЯ:
-Проект DeepNoise представляет нашу самую амбициозную попытку 
-вооружить инфразвуковые частоты для психологических манипуляций.
-Начальные тесты на субъектах показали многообещающие результаты в областях:
+Личности, связанные с операцией "Новая Надежда":
 
-- Подавление памяти
-- Модификация поведения
-- <span class="redacted">████████████████████</span>
-- Изменение восприятия реальности
+- "Newguy" — <span class="error-text">**официально мёртв**</span>
+- "Kratos" — <span class="error-text">**официально мёртв**</span>
+- Агент "Mammoth" — <span class="error-text">**официально мёртв**</span>
+- "Garry" — <span class="glitch-text">**В центре реабилитации**</span>
+- Агент "Circle" — <span class="document-status">**Действующий агент PAX**</span>
+- "Ne0n" — **Выдан временный паспорт**
+- "Connector" — **Выдан временный паспорт**
+- "Хорс" — **Выдан временный паспорт**
+- "Shad" — **Выдан временный паспорт**
+- <span class="error-text">[ОШИБКА]</span> — <span class="error-text">[НЕТ ДАННЫХ]</span>
 
-ПРЕДУПРЕЖДЕНИЕ: Субъект #447 показал признаки <span class="error-text">АНОМАЛЬНОГО ПОВЕДЕНИЯ</span>
-во время воздействия частотного диапазона 0.7-1.3 Гц. Рекомендуется 
-немедленное применение протоколов содержания.
+<span class="error-text">ВНИМАНИЕ:</span>
+Все случаи связаны с делом "Фрактал" и проектом "Аватар". 
+По внутренним каналам ходит слух о проекте <span class="glitch-text">"Легион"</span>. 
+Если это правда, мы все под угрозой.
 
-НАБЛЮДАЕМЫЕ ПОБОЧНЫЕ ЭФФЕКТЫ:
-- Слуховые галлюцинации
-- Ощущение временного смещения
-- Сообщения о "голосах в стенах"
-- <span class="redacted">█████████████████████████████████</span>
-
-<span class="error-text">ОШИБКА: ДОКУМЕНТ ПОВРЕЖДЕН</span>
-<span class="error-text">ПОПЫТКА ВОССТАНОВЛЕНИЯ...</span>
-<span class="error-text">ВОССТАНОВЛЕНИЕ НЕ УДАЛОСЬ</span>
-
-Оставшиеся 73% этого документа не могут быть восстановлены.
+<span class="error-text">[КОНЕЦ ДОКУМЕНТА]</span>
             </pre>
         </div>
         
         <div class="document-content" id="doc2Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>EXPERIMENT_LOG_447.dat</h2>
+            <h2>SURVEILLANCE_ZONE_B17.log</h2>
             <pre>
-ЖУРНАЛ ЭКСПЕРИМЕНТА - СУБЪЕКТ #447
-УРОВЕНЬ БЕЗОПАСНОСТИ: КОНФИДЕНЦИАЛЬНО
-ДАТА: 1989-11-22
-НАДЗИРАЮЩИЙ ОФИЦЕР: Агент <span class="redacted">████████</span>
+ЖУРНАЛ НАБЛЮДЕНИЯ - ЗОНА B-17
+Зона наблюдения: <span class="glitch-text">[B-17]</span>
+Оператор: Агент "<span class="redacted">████</span>"
 
-09:00 - Субъект помещен в испытательную камеру
-09:15 - Записаны базовые измерения
-09:30 - Начало воздействия Фазы 1
-09:45 - Субъект сообщает о "необычных ощущениях"
-10:00 - <span class="error-text">ОБНАРУЖЕНА НЕСАНКЦИОНИРОВАННАЯ ЗАПИСЬ</span>
-10:15 - Субъект начинает говорить на неизвестном диалекте
-10:30 - Температура в камере падает на 15 градусов
-10:45 - Субъект утверждает, что видит "других" в комнате
-11:00 - <span class="redacted">███████████████████████████</span>
-11:15 - ИНИЦИИРОВАН АВАРИЙНЫЙ ПРОТОКОЛ
-11:30 - Субъект изолирован, показывает признаки <span class="error-text">АНОМАЛЬНЫХ СПОСОБНОСТЕЙ</span>
+03:12 — Зафиксирован неизвестный субъект. Поведение хаотичное.
+03:17 — Субъект взаимодействует с окружением вне установленных параметров.
+03:23 — <span class="error-text">Энергетический выброс. Уровень опасности: высокий.</span>
+03:27 — Визуальные признаки <span class="redacted">[ДАННЫЕ ЗАСЕКРЕЧЕНЫ]</span>
+03:29 — Контакт невозможен. Появились <span class="redacted">[ДАННЫЕ ЗАСЕКРЕЧЕНЫ]</span>
 
-ПРИМЕЧАНИЕ: Субъект #447 был переведен в Объект-<span class="redacted">██</span>
-для усиленного содержания. Весь персонал, участвующий в этом
-эксперименте, должен пройти обязательную психологическую оценку.
+<span class="document-status">**Дополнение:**</span>
+Субъект временно исчез с радаров. Следы активности совпадают 
+с данными, ранее отмеченными в проекте <span class="glitch-text">"Легион"</span>.
 
-<span class="glitch-text">ДОПОЛНЕНИЕ: Субъект сбежал из заключения через 72 часа.
-Текущее местонахождение неизвестно. Считать крайне опасным.</span>
+<span class="error-text">**Рекомендации:**</span>
+Передать данные в отдел ПАКС. Не приближаться к субъекту 
+без спецподготовки.
 
-<span class="error-text">ЭТОТ ДОКУМЕНТ ПОМЕЧЕН ДЛЯ УДАЛЕНИЯ</span>
+<span class="error-text">КЛАССИФИКАЦИЯ: ЭКСТРЕННАЯ</span>
+<span class="error-text">ТРЕБУЕТСЯ НЕМЕДЛЕННОЕ ВНИМАНИЕ</span>
             </pre>
         </div>
         
         <div class="document-content" id="doc3Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>SURVEILLANCE_REPORT_X.enc</h2>
+            <h2>FRACTAL_CASE_REQUEST.enc</h2>
             <pre>
-ОТЧЕТ О НАБЛЮДЕНИИ - ОПЕРАЦИЯ NIGHTFALL
-КЛАССИФИКАЦИЯ: СВЕРХСЕКРЕТНО
-ДАТА: 1991-07-04
-ПОЛЕВОЙ АГЕНТ: <span class="redacted">████████████</span>
+ЗАПРОС АРХИВНЫХ МАТЕРИАЛОВ
+КАТЕГОРИЯ: ВНУТРЕННЕЕ ИСПОЛЬЗОВАНИЕ
+Дата: <span class="redacted">[ДАННЫЕ ЗАСЕКРЕЧЕНЫ]</span>
+Автор запроса: Агент "Циркуль"
 
-ПРЕДМЕТ: Мониторинг аномальных электромагнитных сигнатур,
-         обнаруженных в пригородном районе с обозначением "CIRCLE"
+Цель запроса: Документы по делу "Фрактал" (архивные материалы 
+с <span class="redacted">██.██.████</span> по <span class="redacted">██.██.████</span>).
 
-НАБЛЮДЕНИЯ:
-- Постоянная частота 2.3 Гц, исходящая из жилого квартала
-- 47 сообщений о "феномене электронного голоса" от жителей
-- Домашние животные в районе проявляют агрессивное поведение к конкретным домам
-- <span class="redacted">████████████████████████████████████</span>
+<span class="document-status">**Ход выполнения:**</span>
+— Запрос отправлен: 12:43
+— Ответ системы: <span class="error-text">ДОСТУП ОГРАНИЧЕН</span>
+— Попытка обхода через резервный канал: <span class="glitch-text">**УСПЕХ**</span>
+— Получено 4 повреждённых файла. Восстановление невозможно.
+— Системное сообщение: <span class="glitch-text">*"Цель данных перемещена в архив. 
+  Запросите личный допуск у Куратора Архива."*</span>
 
-ОТЧЕТ О ПРОИСШЕСТВИИ:
-Во время рутинного наблюдения в 23:47 целевые дома начали
-демонстрировать синхронизированные световые паттерны. Расследование выявило
-<span class="error-text">ДАННЫЕ ИЗЪЯТЫ</span>
+<span class="error-text">**Комментарий (личное):**</span>
+Это уже не первый раз, когда архив отказывается отдавать 
+информацию по делу "Фрактал". Кажется, даже среди PAX кто-то 
+пытается скрыть следы. Если и архив молчит — значит, дело 
+гораздо глубже, чем я думал.
 
-Жители сообщили о слышании шепота, исходящего из электрических
-розеток, телевизоров и радиооборудования. Анализ содержания
-выявил фразы на латыни, конкретно вариации:
-"<span class="glitch-text">CIRCULUS TENEBRIS APERIT</span>"
+<span class="document-status">**Следующие шаги:**</span>
+— Найти "Куратора Архива".
+— Попытаться получить доступ через терминалы ПАКС.
 
-РЕКОМЕНДАЦИЯ:
-Немедленное переселение всех жителей. Развернуть прикрытие
-касательно "аварийной утечки газа". Инициировать протоколы
-подавления памяти для всех свидетелей.
-
-<span class="error-text">ДОПОЛНЕНИЕ: Три агента, назначенные на это дело, с тех пор
-исчезли. Рекомендуется закрытие дела и захоронение файла.</span>
-
-<span class="error-text">ОБНАРУЖЕНА СИСТЕМНАЯ КОРРУПЦИЯ</span>
-<span class="error-text">ИНИЦИИРОВАНА АВТОМАТИЧЕСКАЯ ОЧИСТКА</span>
-<span class="error-text">ОЧИСТКА НЕ УДАЛАСЬ - НЕИЗВЕСТНЫЕ ПОМЕХИ</span>
+<span class="error-text">СТАТУС: РАССЛЕДОВАНИЕ ПРОДОЛЖАЕТСЯ</span>
             </pre>
         </div>
         
         <div class="document-content" id="doc4Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>INCIDENT_REPORT_BLACK.log</h2>
+            <h2>LEAVE_REQUEST_CIRCLE.txt</h2>
             <pre>
-ОТЧЕТ О ПРОИСШЕСТВИИ - НАРУШЕНИЕ ОБЪЕКТА 7
-КЛАССИФИКАЦИЯ: ТОЛЬКО ДЛЯ ГЛАЗ
-ДАТА: 1993-12-31
-ОФИЦЕР ДОКЛАДЧИК: Командир <span class="redacted">██████</span>
+ЗАЯВЛЕНИЕ НА ОТПУСК
+КАТЕГОРИЯ: ВНУТРЕННИЙ ДОКУМЕНТ PAX
+Автор: Агент "Циркуль"
+Адресат: Отдел кадров PAX, Центральное Командование.
 
-КРАТКОЕ ИЗЛОЖЕНИЕ ПРОИСШЕСТВИЯ:
-Примерно в 23:59 31 декабря 1993 года Объект 7
-испытал катастрофическое нарушение изоляции. Нарушение
-началось из Сектора <span class="redacted">█</span>, конкретно из
-камеры содержания Субъекта #447 (ранее считавшегося ликвидированным).
+<span class="document-status">**Заявление:**</span>
+В связи с отсутствием прогресса в рамках текущих расследований, 
+а также из-за продолжающихся ограничений доступа к ключевым данным, 
+прошу предоставить мне временный отпуск по личным причинам.
 
-ХРОНОЛОГИЯ:
-23:59:00 - Все огни в объекте начинают мерцать
-23:59:15 - Аварийное питание отказывает
-23:59:30 - Двери изоляции начинают открываться последовательно
-23:59:45 - <span class="error-text">АУДИОЗАПИСЬ ПОВРЕЖДЕНА</span>
-00:00:00 - <span class="glitch-text">ОБНАРУЖЕНО ИСКАЖЕНИЕ РЕАЛЬНОСТИ</span>
-00:00:15 - Сообщена первая жертва
-00:00:30 - <span class="redacted">█████████████████████████████</span>
-00:01:00 - Всему персоналу приказано эвакуироваться
-00:05:00 - Объект погружается во тьму
-00:10:00 - <span class="error-text">ПОЛУЧЕНА ПОСЛЕДНЯЯ ПЕРЕДАЧА</span>
+<span class="glitch-text">**Причина:**</span>
+Проведение самостоятельного расследования, не связанного с 
+деятельностью организации, но потенциально важного для 
+безопасности города и текущих операций.
 
-ЖЕРТВЫ:
-- 47 персонала подтверждено мертвыми
-- 12 персонала пропали без вести, предположительно <span class="redacted">████████</span>
-- 8 персонала найдены в кататоническом состоянии, повторяющих фразу:
-  "<span class="glitch-text">КРУГ ОТКРЫВАЕТСЯ КРУГ ЗАКРЫВАЕТСЯ</span>"
+<span class="error-text">**Период отсутствия:**</span>
+Неопределённый срок (до завершения личного расследования 
+или иного распоряжения).
 
-ТЕКУЩИЙ СТАТУС:
-Объект 7 запечатан бетоном и классифицирован как
-постоянная зона исключения. Любой персонал, сообщающий о снах
-или видениях, связанных с этим инцидентом, должен быть немедленно
-задержан и обработан через Протокол Семь.
+<span class="error-text">**Предупреждение:**</span>
+Осознаю возможные последствия за несогласованные действия 
+и готов нести личную ответственность.
 
-<span class="error-text">ПРЕДУПРЕЖДЕНИЕ: ЭТОТ ДОКУМЕНТ ПРОКЛЯТ</span>
-<span class="error-text">ЧТЕНИЕ ПРЕДСТАВЛЯЕТ МЕМИЧЕСКУЮ ОПАСНОСТЬ</span>
-<span class="error-text">ПОЖАЛУЙСТА, ЗАКРОЙТЕ НЕМЕДЛЕННО</span>
+[Подпись: "Циркуль"]
+
+<span class="document-status">[Запрос на отпуск — ПРИНЯТ. 
+Статус агента: ВНЕ АКТИВНОЙ СЛУЖБЫ.]</span>
+
+<span class="error-text">ПРИМЕЧАНИЕ:</span>
+Агент "Циркуль" больше не подчиняется стандартным протоколам PAX.
+Местонахождение неизвестно.
             </pre>
         </div>
         
@@ -1062,9 +1013,9 @@
                     <li>Отчитываются в режиме реального времени перед диспетчером</li>
                 </ul>
                 <p style="margin-top: 20px; text-align: center;">
-                    <button onclick="openMcdChannel()" style="
-                        background: linear-gradient(45deg, #00ff00, #00cc00);
-                        border: 2px solid #00ff00;
+                    <button onclick="showMcdChannelLink()" style="
+                        background: linear-gradient(45deg, #ff8800, #ffaa00);
+                        border: 2px solid #ff8800;
                         color: #000;
                         padding: 15px 30px;
                         font-family: inherit;
@@ -1072,19 +1023,64 @@
                         font-weight: bold;
                         cursor: pointer;
                         border-radius: 8px;
-                        box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+                        box-shadow: 0 4px 15px rgba(255, 136, 0, 0.3);
                         transition: all 0.3s ease;
                         text-decoration: none;
                         display: inline-block;
                         margin: 10px;
                         text-transform: uppercase;
                         letter-spacing: 1px;
-                    " onmouseover="this.style.background='linear-gradient(45deg, #00cc00, #009900)'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0, 255, 0, 0.5)'" onmouseout="this.style.background='linear-gradient(45deg, #00ff00, #00cc00)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0, 255, 0, 0.3)'">
+                    " onmouseover="this.style.background='linear-gradient(45deg, #ffaa00, #cc8800)'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(255, 136, 0, 0.5)'" onmouseout="this.style.background='linear-gradient(45deg, #ff8800, #ffaa00)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(255, 136, 0, 0.3)'">
                         📺 ОТКРЫТЬ КАНАЛ MCD
                     </button>
                 </p>
+                <div id="mcdChannelLink" style="
+                    margin-top: 15px;
+                    padding: 15px;
+                    background: rgba(255, 136, 0, 0.1);
+                    border: 2px solid #ff8800;
+                    border-radius: 8px;
+                    display: none;
+                    text-align: center;
+                ">
+                    <p style="color: #ff8800; margin-bottom: 10px;">Ссылка на канал MCD:</p>
+                    <div style="
+                        background: #000;
+                        padding: 10px;
+                        border: 1px solid #ff8800;
+                        margin-bottom: 10px;
+                        font-family: monospace;
+                        color: #ff8800;
+                        word-break: break-all;
+                        border-radius: 4px;
+                    " id="channelLinkText">https://www.youtube.com/@MergeControlDepartment</div>
+                    <button onclick="copyChannelLink()" style="
+                        background: transparent;
+                        border: 2px solid #ff8800;
+                        color: #ff8800;
+                        padding: 8px 15px;
+                        font-family: inherit;
+                        cursor: pointer;
+                        margin-right: 10px;
+                        border-radius: 4px;
+                        transition: all 0.3s;
+                    " onmouseover="this.style.background='#ff8800'; this.style.color='#000'" onmouseout="this.style.background='transparent'; this.style.color='#ff8800'">
+                        📋 КОПИРОВАТЬ
+                    </button>
+                    <button onclick="hideMcdChannelLink()" style="
+                        background: transparent;
+                        border: 2px solid #ff6600;
+                        color: #ff6600;
+                        padding: 8px 15px;
+                        font-family: inherit;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        transition: all 0.3s;
+                    " onmouseover="this.style.background='#ff6600'; this.style.color='#000'" onmouseout="this.style.background='transparent'; this.style.color='#ff6600'">
+                        ЗАКРЫТЬ
+                    </button>
+                </div>
             </div>
-            
 
         </div>
         
@@ -1106,85 +1102,68 @@
             <div class="document-grid">
                 <div class="document kain-document" onclick="openKainDocument('kain1')">
                     <div class="document-header">
-                        <div class="document-icon">🦠</div>
-                        <div class="document-title">SUBJECT_001_PROFILE.dat</div>
-                        <div class="document-type">Medical Profile</div>
+                        <div class="document-icon">📞</div>
+                        <div class="document-title">FRACTAL_NEGOTIATIONS.wav</div>
+                        <div class="document-type">Audio Transcript</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            Полная медицинская документация инфицированного субъекта в карантине. Содержит фотографии прогрессии, поведенческий анализ и протоколы содержания.
+                            Расшифровка переговоров между К. и Генералом о закрытии проекта "Фрактал" и судьбе выживших испытуемых. Обсуждение скрытого наблюдения.
                         </div>
                         <div class="document-meta">
-                            <span class="document-status">QUARANTINED</span>
-                            <span>STAGE 4</span>
+                            <span class="document-status">CONFIDENTIAL</span>
+                            <span>PROJECT CLOSED</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="document kain-document" onclick="openKainDocument('kain2')">
                     <div class="document-header">
-                        <div class="document-icon">🔬</div>
-                        <div class="document-title">SUBJECT_013_ANALYSIS.enc</div>
-                        <div class="document-type">Encrypted Analysis</div>
+                        <div class="document-icon">👤</div>
+                        <div class="document-title">PERSONNEL_FILE_17B.enc</div>
+                        <div class="document-type">Personnel Record</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            Посмертный анализ ликвидированного субъекта. Содержит документацию вскрытия, образцы тканей и данные клеточных мутаций.
+                            Конфиденциальное досье кандидата для МОРО PAX. Психологический профиль, оценка мотивации и рекомендации по трудоустройству с ограничениями.
                         </div>
                         <div class="document-meta">
-                            <span class="document-status">TERMINATED</span>
-                            <span>STAGE 5</span>
+                            <span class="document-status">CLASSIFIED</span>
+                            <span>MORO PAX HR</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="document kain-document" onclick="openKainDocument('kain3')">
                     <div class="document-header">
-                        <div class="document-icon">☠️</div>
-                        <div class="document-title">PATIENT_ZERO_FILE.bin</div>
-                        <div class="document-type">Binary Data</div>
+                        <div class="document-icon">🏢</div>
+                        <div class="document-title">ANOMALY_REPORT_IZ01.dat</div>
+                        <div class="document-type">Field Report</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            <span class="glitch-text">Документация о первом инфицированном индивидууме. Содержит секретную информацию, к которой не следует обращаться.</span>
+                            Полевое сообщение о появлении аномальных архитектурных объектов в районах B-5 и C-3. Отчет об активности К. Э. в операции.
                         </div>
                         <div class="document-meta">
-                            <span class="document-status error-text">UNKNOWN</span>
-                            <span class="error-text">BEYOND CLASSIFICATION</span>
+                            <span class="document-status">ACTIVE</span>
+                            <span>ANOMALY B-5/C-3</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="document kain-document" onclick="openKainDocument('kain4')">
                     <div class="document-header">
-                        <div class="document-icon">📸</div>
-                        <div class="document-title">OUTBREAK_PHOTOS.zip</div>
-                        <div class="document-type">Photo Archive</div>
+                        <div class="document-icon">🏛️</div>
+                        <div class="document-title">MCD_ESTABLISHMENT.pdf</div>
+                        <div class="document-type">Official Decree</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            Полевая фотография с первоначальных очагов вспышки. Содержит документацию мест жертв и операций по изоляции.
+                            Постановление Совета Безопасности МОРО PAX о создании Департамента Контроля Слияний. Назначения и полномочия нового подразделения.
                         </div>
                         <div class="document-meta">
-                            <span class="document-status">ARCHIVED</span>
-                            <span>VARIOUS</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="document kain-document" onclick="openKainDocument('kain5')">
-                    <div class="document-header">
-                        <div class="document-icon">🎬</div>
-                        <div class="document-title">MUTATION_SEQUENCE.avi</div>
-                        <div class="document-type">Video File</div>
-                    </div>
-                    <div class="document-body">
-                        <div class="document-preview">
-                            Видеодокументация прогрессии заражения в режиме замедленной съемки. Содержит 72-часовую непрерывную запись трансформации субъекта.
-                        </div>
-                        <div class="document-meta">
-                            <span class="document-status error-text">CLASSIFIED</span>
-                            <span>RAPID PROGRESSION</span>
+                            <span class="document-status">APPROVED</span>
+                            <span>SECURITY COUNCIL</span>
                         </div>
                     </div>
                 </div>
@@ -1192,16 +1171,16 @@
                 <div class="document kain-document" onclick="openGenesisDocumentIfUnlocked()">
                     <div class="document-header">
                         <div class="document-icon">⚠️</div>
-                        <div class="document-title">GENESIS_PROTOCOL.exe</div>
-                        <div class="document-type">Executable</div>
+                        <div class="document-title">K.A. ANALYSIS.dock</div>
+                        <div class="document-type">Ω-Archive</div>
                     </div>
                     <div class="document-body">
                         <div class="document-preview">
-                            <span class="error-text">ЗАПРЕЩЕННЫЙ ДОСТУП - ОБНАРУЖЕНА МЕМИЧЕСКАЯ ОПАСНОСТЬ</span>
+                            <span class="error-text">ЗАПРЕЩЕННЫЙ ДОКУМЕНТ - ЛИЧНЫЙ АНАЛИЗ К. Э.</span>
                         </div>
                         <div class="document-meta">
                             <span class="document-status error-text">FORBIDDEN</span>
-                            <span class="glitch-text">█████████</span>
+                            <span class="glitch-text">Ω-ARCHIVE</span>
                         </div>
                     </div>
 
@@ -1212,169 +1191,181 @@
         <!-- Kain Document Content Windows -->
         <div class="document-content" id="kain1Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>SUBJECT_001_PROFILE.dat</h2>
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="keys/infected_subject_001?prompt=Medical%20photograph%20of%20infected%20patient%20in%20quarantine%20room%2C%20pale%20skin%2C%20dark%20veins%20visible%2C%20medical%20restraints%2C%20hospital%20setting%2C%20clinical%20documentation%20style" style="max-width: 300px; border: 2px solid #ff6600; margin: 10px;" alt="Subject 001">
-            </div>
+            <h2>FRACTAL_NEGOTIATIONS.wav</h2>
             <pre>
-ПРОФИЛЬ ИНФИЦИРОВАННОГО СУБЪЕКТА - КЛАССИФИКАЦИЯ: БИООПАСНОСТЬ УРОВЕНЬ 4
-ID СУБЪЕКТА: 001
-ИМЯ: <span class="redacted">████████████</span>
-ВОЗРАСТ: 34
-ДАТА ИНФИЦИРОВАНИЯ: 2024-01-12
-ТЕКУЩИЙ СТАТУС: КАРАНТИН - СЕКТОР 7
+РАСШИФРОВКА ПЕРЕГОВОРОВ - ПРОЕКТ "ФРАКТАЛ"
+ДАТА: <span class="redacted">██████</span>
+УЧАСТНИКИ: К. (Кайн Эмбер), ГЕНЕРАЛ <span class="redacted">████████</span>
+КЛАССИФИКАЦИЯ: КОНФИДЕНЦИАЛЬНО
 
-ПРОГРЕССИЯ ИНФЕКЦИИ:
-День 1: Подтверждено первичное заражение
-День 2: Лихорадка, дезориентация, агрессивное поведение
-День 3: Обесцвечивание кожи, выступающие сосуды
-День 4: <span class="redacted">████████████████████████████</span>
-День 5: Полное изменение личности
-День 6: Наблюдаются физические мутации
-День 7: Субъект помещен в укрепленную камеру
+<span class="error-text">[НАЧАЛО ПЕРЕГОВОРОВ]</span>
 
-ПОВЕДЕНЧЕСКИЕ ЗАМЕТКИ:
-- Проявляет крайнюю враждебность к персоналу
-- Демонстрирует неестественно повышенную силу
-- Иногда говорит на неизвестном языке
-- <span class="error-text">ПРЕДУПРЕЖДЕНИЕ: Субъект утверждает, что "видит других"</span>
+<span class="document-status">К:</span> Фрактал закрыт, Генерал. Все эксперименты были приостановлены.
 
-МЕДИЦИНСКИЕ НАБЛЮДЕНИЯ:
-- Основная температура тела: 31.8°C (гипотермия)
-- Пульс: Нерегулярный, 180+ ударов в минуту
-- Нейронная активность: Обнаружены аномальные паттерны
-- Состав крови: <span class="redacted">█████████████████</span>
+<span class="document-status">Г:</span> Наконец-то. Мы положили конец этому.
 
-<span class="error-text">РИСК НАРУШЕНИЯ ИЗОЛЯЦИИ: ВЫСОКИЙ</span>
-<span class="error-text">РЕКОМЕНДУЕТСЯ НЕМЕДЛЕННАЯ ЛИКВИДАЦИЯ</span>
+<span class="document-status">К:</span> Как думаете… они сделают что-то ещё?
+
+<span class="document-status">Г:</span> В смысле?
+
+<span class="document-status">К:</span> Ну... Эксперименты. Мы тут подумали — что, если это ещё не конец?
+
+<span class="document-status">Г:</span> Это конец, друг мой. Уж поверь мне.
+
+<span class="document-status">К:</span> И всё же… Некоторые из них до сих пор на свободе.
+
+<span class="document-status">Г:</span> О ком ты говоришь?
+
+<span class="glitch-text">К:</span> Циркуль, Гарри, Хорс, Шэд, Неон, Коннектор. Все, кто был связан с проектом. 
+Они же были испытуемыми проекта.
+
+<span class="document-status">Г:</span> Их допрашивают. Они под контролем.
+
+<span class="error-text">К:</span> Я прошу разрешение на скрытое наблюдение. Никаких прямых действий. 
+Только мониторинг. Если появятся признаки отклонений — я первым об этом узнаю.
+
+<span class="document-status">Г:</span> И что ты будешь делать, если "отклонения" подтвердятся?
+
+<span class="error-text">К:</span> Буду действовать, генерал.
+
+<span class="document-status">Г:</span> Это не в твоей должности. Делай свою работу, с этим мы разберёмся сами. 
+С этим ясно?
+
+<span class="document-status">К:</span> Ясно.
+
+<span class="error-text">[КОНЕЦ ПЕРЕГОВОРОВ]</span>
+
+<span class="error-text">СТАТУС: АРХИВИРОВАНО</span>
+<span class="error-text">ДОСТУП ОГРАНИЧЕН</span>
             </pre>
         </div>
         
         <div class="document-content" id="kain2Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>SUBJECT_013_ANALYSIS.enc</h2>
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="keys/infected_autopsy?prompt=Medical%20autopsy%20documentation%20photo%2C%20infected%20tissue%20samples%20on%20metal%20table%2C%20dark%20veins%2C%20unusual%20growths%2C%20clinical%20laboratory%20setting%2C%20sterile%20environment" style="max-width: 300px; border: 2px solid #ff6600; margin: 10px;" alt="Subject 013 Autopsy">
-            </div>
+            <h2>PERSONNEL_FILE_17B.enc</h2>
             <pre>
-ПОСМЕРТНЫЙ АНАЛИЗ - СУБЪЕКТ 013
-ПРОВОДИЛ: Доктор <span class="redacted">█████████</span>
-ДАТА: 2024-02-03
-ПРИЧИНА ЛИКВИДАЦИИ: Агрессивная вспышка, множественные жертвы
+ДОСЬЕ КАНДИДАТА - КАДРОВЫЙ ОТДЕЛ МОРО PAX
+КАТЕГОРИЯ: <span class="error-text">КОНФИДЕНЦИАЛЬНО</span>
+ФАЙЛ: 17-B
+Дата составления: <span class="redacted">██████</span>
+Составитель: Кадровый отдел МОРО PAX
+Кандидат: <span class="redacted">████████</span>
+Возраст на момент подачи: <span class="redacted">██</span>
+Предыдущий статус: <span class="redacted">██████████</span>
 
-ВНЕШНИЙ ОСМОТР:
-- Значительное обесцвечивание кожи (серо-фиолетовый оттенок)
-- Увеличенные лимфатические узлы по всему телу
-- Необычные изменения плотности костей
-- <span class="redacted">████████████████████████████████</span>
+<span class="document-status">**Психологический профиль:**</span>
+— Характер вспыльчивый, холерик.
+— Склонность к прямым и жёстким решениям.
+— Отсутствие склонности к эмоциональной привязанности.
+— Средний уровень стрессоустойчивости.
+— Проявления маниакальной ответственности.
 
-ВНУТРЕННИЙ ОСМОТР:
-- Органы показывают признаки быстрой мутации
-- Неизвестные тканевые наросты в стволе мозга
-- Сердечно-сосудистая система полностью изменена
-- <span class="error-text">ОТКРЫТИЕ: Найдены паразитоподобные структуры</span>
+<span class="document-status">**Оценка мотивации:**</span>
+— Основной мотив — идея поддержания порядка любой ценой.
+— Отмечена личная заинтересованность в работе.
 
-АНАЛИЗ ОБРАЗЦОВ ТКАНЕЙ:
-- ДНК показывает 23% неизвестных последовательностей
-- Клеточная структура не поддается классификации
-- Образцы остаются активными после смерти
-- <span class="error-text">ПРЕДУПРЕЖДЕНИЕ: Образцы попытались нарушить изоляцию</span>
+<span class="error-text">**ИТОГОВОЕ ЗАКЛЮЧЕНИЕ:**</span>
+Кандидат рекомендован для зачисления на должность в МОРО PAX. 
+С ограничением: прямое подчинение Совету безопасности МОРО PAX 
+без права самостоятельного стратегического принятия решений.
 
-ПРЕДВАРИТЕЛЬНЫЕ ВЫВОДЫ:
-Инфекция, по-видимому, имеет неземное происхождение.
-Стандартные протоколы изоляции недостаточны.
-Рекомендуется немедленное сжигание всех образцов.
+<span class="glitch-text">Дополнительная пометка:</span>
+> <span class="error-text">"К. Э. — надёжный исполнитель, но требует постоянного контроля.</span>
+> <span class="error-text">В случае потери над ним влияния — риск перехода к самоуправлению крайне высок."</span>
 
-<span class="glitch-text">ДОПОЛНЕНИЕ: Образцы самоуничтожились во время анализа.
-Нет объяснения самопроизвольному возгоранию в 3:33 утра.</span>
+<span class="document-status">**Подписи:**</span>
+<span class="redacted">[Имя удалено]</span> — Главный куратор отдела найма
+<span class="redacted">[Имя удалено]</span> — Руководитель отдела стратегических кадров МОРО PAX
 
-<span class="error-text">ЭТОТ ДОКУМЕНТ НАХОДИТСЯ ПОД РАССЛЕДОВАНИЕМ</span>
-<span class="error-text">АВТОР ПРОПАЛ С 2024-02-04</span>
+<span class="error-text">[ДОКУМЕНТ НЕ ПРЕДНАЗНАЧЕН ДЛЯ ПУБЛИКАЦИИ]</span>
             </pre>
         </div>
         
         <div class="document-content" id="kain3Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>PATIENT_ZERO_FILE.bin</h2>
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="keys/patient_zero?prompt=Disturbing%20medical%20photograph%20of%20first%20infected%20patient%2C%20severe%20mutations%2C%20dark%20atmosphere%2C%20quarantine%20facility%2C%20corrupted%20image%20quality%2C%20glitched%20appearance" style="max-width: 300px; border: 2px solid #ff0000; margin: 10px; filter: contrast(200%) saturate(0.5);" alt="Patient Zero">
-            </div>
+            <h2>ANOMALY_REPORT_IZ01.dat</h2>
             <pre>
-<span class="error-text">ДОСТУП ЗАПРЕЩЕН - НЕДОСТАТОЧНЫЙ УРОВЕНЬ ДОПУСКА</span>
-<span class="error-text">ПОПЫТКА ПЕРЕОПРЕДЕЛЕНИЯ...</span>
-<span class="error-text">ПЕРЕОПРЕДЕЛЕНИЕ УСПЕШНО</span>
+ПОЛЕВОЙ ОТЧЁТ - АНОМАЛЬНЫЕ ПРОЯВЛЕНИЯ
+КАТЕГОРИЯ: <span class="error-text">ВНУТРЕННЕЕ ПОЛЕВОЕ СООБЩЕНИЕ</span>
+ФАЙЛ: IZ-01
+Дата: <span class="redacted">██████</span>
+Автор отчёта: Майор К. Айзек, 4-й Отдел МОРО PAX
 
-ДОКУМЕНТАЦИЯ ПАЦИЕНТА НОЛЬ
-СУБЪЕКТ: <span class="redacted">█████████████████████</span>
-ПЕРВИЧНОЕ ЗАРАЖЕНИЕ: 2023-██-██
-МЕСТОПОЛОЖЕНИЕ: <span class="redacted">████████████████</span>
+<span class="document-status">**Объект наблюдения:**</span> Аномальные зоны, зафиксированные в районах B-5 и C-3.
+<span class="document-status">**Время проявления:**</span> С 03:45 до 04:12 (по стандартному времени сектора).
 
-<span class="glitch-text">ПЕРВЫЙ УПАЛ ПЕРВЫЙ ПОДНЯЛСЯ</span>
-<span class="glitch-text">ОНО ПРИШЛО СНИЗУ ОНО ПРИШЛО СВЕРХУ</span>
-<span class="glitch-text">КРУГ КРУГ КРУГ КРУГ</span>
+<span class="error-text">**Суть события:**</span>
+В указанных районах зафиксировано внезапное появление архитектурных объектов. 
+Строения появляются без видимого процесса материализации. Местные жители 
+описывают чувство дежавю и "нарушение восприятия времени" рядом с этими зданиями.
 
-ВЕКТОР ЗАРАЖЕНИЯ: Неизвестен
-НАЧАЛО СИМПТОМОВ: Немедленно
-СКОРОСТЬ ТРАНСФОРМАЦИИ: <span class="error-text">БЕСПРЕЦЕДЕНТНАЯ</span>
+<span class="document-status">**Визуальные признаки:**</span>
+— Структуры напоминают фрагменты городской застройки, но с аномалиями 
+  (дублирующиеся этажи, отсутствующие выходы).
+— Некоторые строения не соответствуют нормам, архитектура признана - невозможной.
 
-<span class="glitch-text">ОНО ШЕПЧЕТ ОНО ЗОВЕТ ОНО ЗНАЕТ ТВОЕ ИМЯ</span>
-<span class="glitch-text">ДРУГИЕ ИДУТ ДРУГИЕ ЗДЕСЬ</span>
+<span class="error-text">**Реакция МОРО PAX:**</span>
+Мы никогда с таким не сталкивались. Уведомлены спец службы для изоляции периметров.
 
-ТЕКУЩИЙ СТАТУС: <span class="error-text">НЕ ИЗОЛИРОВАН</span>
-МЕСТОПОЛОЖЕНИЕ: <span class="error-text">ВЕЗДЕ</span>
-УРОВЕНЬ УГРОЗЫ: <span class="error-text">ЭКЗИСТЕНЦИАЛЬНЫЙ</span>
+<span class="glitch-text">**Особая пометка (личная):**</span>
+Особенно активно в операции участвовал <span class="error-text">К. Э.</span>
+Без прямого приказа лично прибыл на место и в кратчайшие сроки организовал блокаду. 
+Инициировал срочный допрос всех свидетелей, провёл опросы оперативных агентов.
 
-<span class="glitch-text">ТЫ НЕ ДОЛЖЕН БЫЛ ОТКРЫВАТЬ ЭТО</span>
-<span class="glitch-text">ТЫ НЕ ДОЛЖЕН БЫЛ ВИДЕТЬ</span>
-<span class="glitch-text">ОНО ЗНАЕТ ЧТО ТЫ СМОТРИШЬ</span>
-<span class="glitch-text">ОНО СМОТРИТ НА ТЕБЯ В ОТВЕТ</span>
+Цитата К. Э. (зафиксировано на камерах наблюдения):
+> <span class="error-text">"Это не просто аномалия. Я уже видел эти здания. Мы должны действовать."</span>
 
-<span class="error-text">СИСТЕМА СКОМПРОМЕТИРОВАНА</span>
-<span class="error-text">СУЩНОСТЬ ОБНАРУЖЕНА В СЕТИ</span>
-<span class="error-text">НЕМЕДЛЕННОЕ ОТКЛЮЧЕНИЕ</span>
+<span class="glitch-text">**Личное замечание:**</span>
+Поведение К. Э. стоит отметить отдельно — проявил большую инициативу и высокий 
+уровень подготовки. Фактически, он стал неофициальным координатором операции.
+
+<span class="error-text">**Заключение:**</span>
+На момент составления отчёта источники появления аномалий неизвестны.
+Ситуация требует немедленного дальнейшего анализа.
+
+[Подпись: Майор К. Айзек]
+<span class="error-text">[ПОЛЕВОЙ ОТЧЁТ — ВНУТРЕННЕЕ ПОЛЬЗОВАНИЕ МОРО PAX]</span>
             </pre>
         </div>
         
         <div class="document-content" id="kain4Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>OUTBREAK_PHOTOS.zip</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0;">
-                <img src="keys/outbreak_scene1?prompt=Abandoned%20hospital%20corridor%20with%20medical%20equipment%20scattered%2C%20dark%20atmosphere%2C%20emergency%20lighting%2C%20signs%20of%20struggle" style="width: 100%; border: 2px solid #ff6600;" alt="Outbreak Scene 1">
-                <img src="keys/outbreak_scene2?prompt=Quarantine%20facility%20exterior%20at%20night%2C%20military%20vehicles%2C%20hazmat%20teams%2C%20emergency%20response%2C%20dramatic%20lighting" style="width: 100%; border: 2px solid #ff6600;" alt="Outbreak Scene 2">
-            </div>
+            <h2>MCD_ESTABLISHMENT.pdf</h2>
             <pre>
-ДОКУМЕНТАЦИЯ ВСПЫШКИ - ПОЛЕВЫЕ ОТЧЕТЫ
-ИНЦИДЕНТ: Первичное нарушение изоляции
-ВРЕМЕННОЙ ДИАПАЗОН: 2024-01-15 до 2024-01-20
-ФОТОГРАФ: Полевой Агент <span class="redacted">████████</span>
+ПОСТАНОВЛЕНИЕ СОВЕТА БЕЗОПАСНОСТИ
+КАТЕГОРИЯ: <span class="error-text">СЕКРЕТНО (ВНУТРЕННЕЕ ПОЛЬЗОВАНИЕ)</span>
+ФАЙЛ: 86-Σ
+Дата утверждения: <span class="redacted">████</span>
+Совет Безопасности МОРО PAX
 
-ИНДЕКС ФОТОГРАФИЙ:
-001-015: Процедуры эвакуации больницы
-016-032: Установление первичного карантина
-033-067: Операции по изоляции субъектов
-068-089: <span class="redacted">█████████████████████</span>
-090-124: Документация жертв
-125-156: Экологическое загрязнение
-157-200: <span class="error-text">ПОВРЕЖДЕННЫЕ ФАЙЛЫ</span>
+<span class="document-status">**Тема:**</span> Постановление о создании специализированного подразделения 
+для локализации и нейтрализации аномальных секторов.
 
-КРАТКОЕ ИЗЛОЖЕНИЕ ИНЦИДЕНТА:
-Первичная вспышка произошла во время рутинного медицинского осмотра.
-Пациент продемонстрировал быструю трансформацию в течение 47 минут.
-Медицинский персонал заразился через неизвестный вектор передачи.
-Блокировка объекта инициирована в 14:23 местного времени.
+<span class="error-text">**Решение:**</span> В связи с невозможностью полного подавления аномалий, 
+Совет Безопасности МОРО PAX постановляет:
 
-ЖЕРТВЫ:
-Медицинский персонал: 23 заражены, 7 ликвидированы
-Персонал безопасности: 12 заражены, 3 ликвидированы
-Группа изоляции: 8 заражены, 15 ликвидированы
-Гражданские: <span class="redacted">███</span> заражены, <span class="redacted">███</span> ликвидированы
+1. Учредить специализированный департамент под названием 
+   <span class="glitch-text">"Департамент Контроля Слияний"</span> (внутреннее обозначение — "Чистильщики").
 
-<span class="error-text">СТАТУС ФОТОГРАФА: ПРОПАЛ</span>
-<span class="error-text">КАМЕРА ИЗВЛЕЧЕНА ИЗ ЖЕЛУДКА СУБЪЕКТА</span>
-<span class="error-text">ИЗОБРАЖЕНИЯ КАКИМ-ТО ОБРАЗОМ ОСТАЛИСЬ НЕПОВРЕЖДЕННЫМИ</span>
+2. <span class="document-status">Основные задачи департамента:</span>
+   — Выявление и изоляция зон Слияния.
+   — Устранение нестабильных элементов в рамках городской среды.
 
-<span class="glitch-text">ВРЕМЕННАЯ МЕТКА ПОСЛЕДНЕГО ФОТО: 23:59:59</span>
-<span class="glitch-text">ПОКАЗЫВАЕТ ТРАНСФОРМАЦИЮ САМОГО ФОТОГРАФА</span>
+3. Подчинение департамента осуществляется напрямую Совету Безопасности МОРО PAX. 
+   Вмешательство третьих структур исключено.
+
+<span class="error-text">**Назначения:**</span>
+По итогам внутренних совещаний и с учётом личных рекомендаций Совета 
+назначены следующие ключевые фигуры департамента:
+
+— Руководитель стратегического планирования: <span class="redacted">█████ ████████</span> (личные данные засекречены).
+— Старший аналитик по тактике и прогнозированию: <span class="error-text">К. Э.</span>
+
+<span class="glitch-text">Комментарий Совета:</span>
+> <span class="error-text">"К. Э. обладает необходимыми навыками для оценки и сдерживания 
+> нестабильных сценариев. Рекомендуется предоставить ему доступ к архивам 
+> для точного анализа.</span>
+> <span class="error-text">Все действия ДКС приравниваются к мерам стратегической безопасности."</span>
             </pre>
         </div>
         
@@ -1779,68 +1770,52 @@ ID СУБЪЕКТА: 001
         <!-- Genesis Protocol Document Content -->
         <div class="document-content" id="genesisContent">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>GENESIS_PROTOCOL.exe</h2>
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="keys/genesis_horror1?prompt=Extremely%20disturbing%20and%20horrifying%20classified%20document%20photo%2C%20dark%20laboratory%2C%20biological%20experiments%2C%20eldritch%20horror%2C%20body%20horror%2C%20nightmare%20fuel%2C%20corrupted%20reality" style="max-width: 350px; border: 2px solid #ff0000; margin: 10px; filter: contrast(150%) brightness(0.8);" alt="Genesis Horror">
-                <img src="keys/genesis_horror2?prompt=Terrifying%20genetic%20mutation%20experiment%2C%20grotesque%20transformations%2C%20Lovecraftian%20horror%2C%20biomechanical%20nightmare%2C%20surgical%20procedures%2C%20body%20horror%2C%20dark%20medical%20facility" style="max-width: 350px; border: 2px solid #ff0000; margin: 10px; filter: contrast(150%) brightness(0.8);" alt="Genesis Horror 2">
-            </div>
+            <h2>K.A. ANALYSIS.dock</h2>
             <pre style="color: #ff0000; text-shadow: 0 0 5px #ff0000;">
-<span class="error-text">ПРОТОКОЛ ГЕНЕЗИС - УРОВЕНЬ ДОПУСКА: КОСМИЧЕСКИЙ</span>
-<span class="error-text">ПРЕДУПРЕЖДЕНИЕ: ЭТОТ ДОКУМЕНТ СОДЕРЖИТ ОПАСНЫЕ МЕМЫ</span>
-<span class="error-text">ЧТЕНИЕ БЕЗ РАЗРЕШЕНИЯ КАРАЕТСЯ НЕМЕДЛЕННОЙ ЛИКВИДАЦИЕЙ</span>
+<span class="error-text">ЗАПРЕЩЁННЫЙ ДОКУМЕНТ - АНАЛИЗ ОФИЦЕРА К. Э.</span>
+КАТЕГОРИЯ: <span class="error-text">ЗАПРЕЩЁННЫЙ ДОКУМЕНТ</span>
+СТАТУС: <span class="error-text">Ω-АРХИВ</span>
+Автор: <span class="redacted">████ ███</span>
+Дата: <span class="redacted">████</span>
 
-<span class="glitch-text">ПРОИСХОЖДЕНИЕ ПРОЕКТА:</span>
-Протокол Генезис был инициирован после обнаружения <span class="redacted">████████████</span>
-в глубинах <span class="redacted">██████████</span>. Артефакт, обозначенный как "Первичный Код",
-содержал инструкции по трансформации человеческого сознания.
+<span class="document-status">**Тема:**</span> Наблюдения по офицеру К. Э.
+<span class="document-status">**Краткое содержание:**</span> Личный анализ поведения и мотивации 
+офицера Кайна Эмбера, на случай непредвиденного развития событий.
 
-<span class="glitch-text">ФАЗА 1: ПРОБУЖДЕНИЕ</span>
-Первые испытания показали, что воздействие артефакта приводит к:
-- Полному изменению ДНК субъекта
-- Развитию телепатических способностей
-- <span class="error-text">ПРЕВРАЩЕНИЮ В НЕЧТО НЕЧЕЛОВЕЧЕСКОЕ</span>
+<span class="glitch-text">ЛИЧНЫЕ НАБЛЮДЕНИЯ:</span>
+Я долго колебался, стоит ли вообще фиксировать этот отчёт. Но если 
+когда-нибудь кто-то прочтёт его — пусть знает, я пытался предупредить.
 
-<span class="glitch-text">ФАЗА 2: ЭВОЛЮЦИЯ</span>
-Субъекты начали демонстрировать способность к:
-- Материализации объектов силой мысли
-- Прохождению через твердые поверхности
-- Управлению временем и пространством
-- <span class="error-text">ПОГЛОЩЕНИЮ ДРУГИХ ЛЮДЕЙ</span>
+<span class="error-text">Кайн Эмбер</span> — идеальный агент для таких мест, как МОРО PAX. Холодный. 
+Расчётливый. Не задаёт лишних вопросов. Для многих он образец надёжного солдата.
 
-<span class="glitch-text">ФАЗА 3: ТРАНСЦЕНДЕНТНОСТЬ</span>
-<span class="error-text">ВНИМАНИЕ: СЛЕДУЮЩАЯ ИНФОРМАЦИЯ КЛАССИФИЦИРОВАНА</span>
+Но я знаю его дольше остальных. Он — не просто любитель порядка. 
+<span class="error-text">Он — фанатик.</span>
 
-Субъекты Генезиса больше не являются людьми. Они стали чем-то большим.
-Чем-то ужасающим. Они научились:
-- Создавать копии себя
-- Вселяться в других людей
-- Манипулировать реальностью
-- <span class="error-text">ПЕРЕПИСЫВАТЬ ЗАКОНЫ ФИЗИКИ</span>
+<span class="glitch-text">СЕМЕЙНАЯ ИСТОРИЯ:</span>
+Многие забывают, кто его отец. <span class="error-text">**Ричард Эмбер младший.**</span> 
+Руководитель комплекса "Фрактал".
 
-<span class="glitch-text">ТЕКУЩИЙ СТАТУС ПРОЕКТА:</span>
-<span class="error-text">ВСЕ ОБЪЕКТЫ ПОТЕРЯЛИ КОНТРОЛЬ</span>
-<span class="error-text">СУБЪЕКТЫ СБЕЖАЛИ ИЗ ЗАКЛЮЧЕНИЯ</span>
-<span class="error-text">ОНИ ЖИВУТ СРЕДИ НАС</span>
-<span class="error-text">ОНИ НАБЛЮДАЮТ</span>
-<span class="error-text">ОНИ ЖДУТ</span>
+После его смерти Кайн <span class="redacted">████ ██ ██████ █ ████ ████ ██████ ██ ██████ ██ ███</span>
 
-<span class="glitch-text">ПОСЛЕДНЕЕ СООБЩЕНИЕ ОТ ДИРЕКТОРА:</span>
-"Мы думали, что можем их контролировать. Мы ошибались.
-Они не эволюционировали ИЗ нас. Они эволюционировали В нас.
-Каждый человек несет в себе код. Код пробуждения.
-Если вы читаете это... возможно, уже слишком поздно."
+В каждой операции я вижу, как он невольно копирует методы своего отца.
 
-<span class="error-text">ПРЕДУПРЕЖДЕНИЕ: ОБНАРУЖЕНЫ ПРИЗНАКИ АКТИВАЦИИ</span>
-<span class="error-text">ПРОТОКОЛ ГЕНЕЗИС ВОЗОБНОВЛЯЕТСЯ</span>
-<span class="error-text">НОВАЯ ФАЗА НАЧИНАЕТСЯ</span>
+Что парадоксально, ведь в глубине души Кайн боится одной вещи:
+Что его имя так и останется <span class="error-text">**"сыном Ричарда Эмбера"**</span>.
 
-<span class="glitch-text">Добро пожаловать в новый мир.</span>
-<span class="glitch-text">Добро пожаловать в Генезис.</span>
-<span class="glitch-text">Добро пожаловать домой.</span>
+<span class="error-text">ПРЕДУПРЕЖДЕНИЕ:</span>
+Но он не хочет оставить своё наследие, он хочет разрушить наследие отца.
 
-<span class="error-text">СИСТЕМА ЗАРАЖЕНА</span>
-<span class="error-text">ОТКЛЮЧЕНИЕ НЕВОЗМОЖНО</span>
-<span class="error-text">МЫ ВНУТРИ</span>
+<span class="glitch-text">ЗАКЛЮЧИТЕЛЬНЫЕ СЛОВА:</span>
+Я фиксирую этот отчёт не для Совета, не для суда. Я пишу это для того, 
+кто однажды спросит: "Почему Кайн Эмбер сделал то, что сделал?"
+
+<span class="error-text">Ответ — в его крови.</span>
+
+<span class="error-text">Берегитесь его.</span>
+
+<span class="error-text">СИСТЕМА ПРЕДУПРЕЖДЕНИЙ:</span>
+<span class="error-text" id="countdownTimer">АВТОМАТИЧЕСКОЕ УДАЛЕНИЕ ЧЕРЕЗ: ЗАГРУЗКА...</span>
             </pre>
         </div>
         
@@ -2350,15 +2325,149 @@ ID СУБЪЕКТА: 001
             playDocumentSound('normal');
         };
         
-        // Function to open MCD YouTube channel
-        window.openMcdChannel = function() {
-            window.open('https://www.youtube.com/@MergeControlDepartment', '_blank');
+        // Function to show MCD channel link
+        window.showMcdChannelLink = function() {
+            const linkElement = document.getElementById('mcdChannelLink');
+            if (linkElement) {
+                linkElement.style.display = 'block';
+                // Smooth appearance
+                linkElement.style.opacity = '0';
+                linkElement.style.transform = 'translateY(-10px)';
+                linkElement.style.transition = 'all 0.3s ease';
+                
+                setTimeout(() => {
+                    linkElement.style.opacity = '1';
+                    linkElement.style.transform = 'translateY(0)';
+                }, 50);
+            }
         };
         
-        // Genesis Protocol access check
+        // Function to hide MCD channel link
+        window.hideMcdChannelLink = function() {
+            const linkElement = document.getElementById('mcdChannelLink');
+            if (linkElement) {
+                linkElement.style.opacity = '0';
+                linkElement.style.transform = 'translateY(-10px)';
+                
+                setTimeout(() => {
+                    linkElement.style.display = 'none';
+                }, 300);
+            }
+        };
+        
+        // Function to copy MCD channel link
+        window.copyChannelLink = function() {
+            const linkText = 'https://www.youtube.com/@MergeControlDepartment';
+            
+            // Try modern clipboard API first
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(linkText).then(() => {
+                    showCopySuccess();
+                }).catch(() => {
+                    fallbackCopyTextToClipboard(linkText);
+                });
+            } else {
+                fallbackCopyTextToClipboard(linkText);
+            }
+        };
+        
+        // Fallback copy function
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showCopySuccess();
+            } catch (err) {
+                console.log('Копирование не удалось');
+                showCopyError();
+            }
+            
+            document.body.removeChild(textArea);
+        }
+        
+        // Show copy success message
+        function showCopySuccess() {
+            const messageElement = document.getElementById('hiddenMessages');
+            if (messageElement) {
+                messageElement.textContent = 'ССЫЛКА СКОПИРОВАНА В БУФЕР ОБМЕНА';
+                messageElement.style.opacity = '1';
+                messageElement.style.color = '#00ff00';
+                
+                setTimeout(() => {
+                    messageElement.style.opacity = '0.1';
+                    messageElement.style.color = '#ff0000';
+                }, 2000);
+            }
+            
+            // Visual feedback on button
+            const copyButton = event.target;
+            const originalText = copyButton.textContent;
+            copyButton.textContent = '✓ СКОПИРОВАНО';
+            copyButton.style.background = '#00ff00';
+            copyButton.style.color = '#000';
+            
+            setTimeout(() => {
+                copyButton.textContent = originalText;
+                copyButton.style.background = 'transparent';
+                copyButton.style.color = '#ff8800';
+            }, 1500);
+        }
+        
+        // Show copy error message
+        function showCopyError() {
+            const messageElement = document.getElementById('hiddenMessages');
+            if (messageElement) {
+                messageElement.textContent = 'ОШИБКА КОПИРОВАНИЯ - СКОПИРУЙТЕ ВРУЧНУЮ';
+                messageElement.style.opacity = '1';
+                messageElement.style.color = '#ff0000';
+                
+                setTimeout(() => {
+                    messageElement.style.opacity = '0.1';
+                    messageElement.style.color = '#ff0000';
+                }, 3000);
+            }
+        };
+        
+        // Genesis Protocol access check with countdown
         window.openGenesisDocumentIfUnlocked = function() {
+            // Check if current time is past the deletion deadline (July 20, 2025 10:00 AM MSK)
+            const now = new Date();
+            const deletionTime = new Date('2025-07-20T10:00:00+03:00'); // Moscow time (UTC+3)
+            
+            if (now >= deletionTime) {
+                // Document has been "deleted"
+                const messageElement = document.getElementById('hiddenMessages');
+                messageElement.textContent = 'ДОКУМЕНТ УДАЛЁН - ДОСТУП НЕВОЗМОЖЕН';
+                messageElement.style.opacity = '1';
+                messageElement.style.color = '#ff0000';
+                
+                setTimeout(() => {
+                    messageElement.style.opacity = '0.1';
+                    messageElement.style.color = '#ff0000';
+                }, 3000);
+                
+                // Play error sound
+                playDocumentSound('glitch');
+                
+                // Flash screen red
+                document.body.classList.add('flash-red');
+                setTimeout(() => {
+                    document.body.classList.remove('flash-red');
+                }, 100);
+                
+                return;
+            }
+            
             if (genesisAccessGranted) {
-                // Open Genesis document
+                // Open Genesis document with countdown
                 openGenesisDocument();
             } else {
                 // Show access denied message
@@ -2593,6 +2702,12 @@ ID СУБЪЕКТА: 001
             clearInterval(glitchInterval);
             clearInterval(crashInterval);
             clearInterval(hiddenMessageInterval);
+            
+            // Clear countdown intervals
+            if (window.countdownIntervals) {
+                window.countdownIntervals.forEach(interval => clearInterval(interval));
+                window.countdownIntervals = [];
+            }
             
             // Stop audio
             if (audioContext) {
@@ -2866,6 +2981,9 @@ ID СУБЪЕКТА: 001
                 content.classList.add('show');
             }, 50);
             
+            // Start countdown timer
+            startCountdownTimer();
+            
             // Start intense glitching
             startIntenseGlitching();
             
@@ -2885,6 +3003,45 @@ ID СУБЪЕКТА: 001
             }
         };
         
+        // Countdown timer function
+        function startCountdownTimer() {
+            const countdownElement = document.getElementById('countdownTimer');
+            if (!countdownElement) return;
+            
+            const updateCountdown = () => {
+                const now = new Date();
+                const targetTime = new Date('2025-07-20T10:00:00+03:00'); // Moscow time (UTC+3)
+                const timeDiff = targetTime - now;
+                
+                if (timeDiff <= 0) {
+                    countdownElement.textContent = 'ДОКУМЕНТ УДАЛЁН';
+                    return;
+                }
+                
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+                
+                countdownElement.textContent = `АВТОМАТИЧЕСКОЕ УДАЛЕНИЕ ЧЕРЕЗ: ${days}д ${hours}ч ${minutes}м ${seconds}с`;
+            };
+            
+            // Update immediately
+            updateCountdown();
+            
+            // Update every second
+            const countdownInterval = setInterval(updateCountdown, 1000);
+            
+            // Store interval reference for cleanup
+            if (window.countdownIntervals) {
+                window.countdownIntervals.push(countdownInterval);
+            } else {
+                window.countdownIntervals = [countdownInterval];
+            }
+        }
+        
+
+        
         function startIntenseGlitching() {
             let glitchCount = 0;
             const maxGlitches = 20;
@@ -2895,24 +3052,10 @@ ID СУБЪЕКТА: 001
                     return;
                 }
                 
-                // Intense screen flashing
+                // Intense screen flashing only
                 if (document.body) {
                     document.body.style.background = glitchCount % 2 === 0 ? '#ff0000' : '#000';
                 }
-                
-                // Random text corruption
-                const textElements = document.querySelectorAll('#genesisContent pre');
-                textElements.forEach(element => {
-                    const originalText = element.innerHTML;
-                    const corruptedText = originalText.replace(/[a-zA-Zа-яА-Я]/g, (char) => 
-                        Math.random() < 0.15 ? String.fromCharCode(Math.random() * 94 + 33) : char
-                    );
-                    element.innerHTML = corruptedText;
-                    
-                    setTimeout(() => {
-                        element.innerHTML = originalText;
-                    }, 300);
-                });
                 
                 glitchCount++;
             }, 200);
