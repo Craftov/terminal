@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARCHIVE_TERMINAL_7.3.2</title>
+    <title>PAX_TERMINAL.exe</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400&display=swap');
         
@@ -649,7 +649,7 @@
                 transition: all 0.3s;
                 opacity: 0.5;
             ">⋯</button>
-            <h1>ARCHIVE_TERMINAL_7.3.2</h1>
+            <h1>PAX_TERMINAL.exe</h1>
             <div class="input-group">
                 <input type="text" id="username" placeholder="USERNAME" maxlength="20">
             </div>
@@ -672,7 +672,7 @@
         <!-- Main Interface -->
         <div class="main-interface" id="mainInterface">
             <div class="terminal-header">
-                <span>ARCHIVE_TERMINAL_7.3.2 - CLASSIFIED ACCESS LEVEL: <span class="error-text">RESTRICTED</span></span>
+                <span>PAX_TERMINAL.exe - CLASSIFIED ACCESS LEVEL: <span class="error-text">RESTRICTED</span></span>
                 <button class="logout-btn" onclick="logout()">LOGOUT</button>
             </div>
             
@@ -687,8 +687,7 @@
             <div class="document-grid">
                 <div class="document" onclick="openDocument('doc1')">
                     <div class="document-header">
-                        <div class="document-icon">👥</div>
-                        <div class="document-title">OPERATION_NEW_HOPE.dat</div>
+                        <div class="document-title">OPERATION_NEW_HOPE.dock</div>
                         <div class="document-type">Personnel File</div>
                     </div>
                     <div class="document-body">
@@ -704,8 +703,8 @@
                 
                 <div class="document" onclick="openDocument('doc2')">
                     <div class="document-header">
-                        <div class="document-icon">👁️</div>
-                        <div class="document-title">SURVEILLANCE_ZONE_B17.log</div>
+                        <div class="document-icon"></div>
+                        <div class="document-title">SURVEILLANCE_ZONE_B17.dock</div>
                         <div class="document-type">Observation Log</div>
                     </div>
                     <div class="document-body">
@@ -721,8 +720,8 @@
                 
                 <div class="document" onclick="openDocument('doc3')">
                     <div class="document-header">
-                        <div class="document-icon">🗂️</div>
-                        <div class="document-title">FRACTAL_CASE_REQUEST.enc</div>
+                        <div class="document-icon"></div>
+                        <div class="document-title">FRACTAL_CASE_REQUEST.dock</div>
                         <div class="document-type">Archive Request</div>
                     </div>
                     <div class="document-body">
@@ -738,8 +737,8 @@
                 
                 <div class="document" onclick="openDocument('doc4')">
                     <div class="document-header">
-                        <div class="document-icon">📋</div>
-                        <div class="document-title">LEAVE_REQUEST_CIRCLE.txt</div>
+                        <div class="document-icon"></div>
+                        <div class="document-title">LEAVE_REQUEST_CIRCLE.dock</div>
                         <div class="document-type">Official Document</div>
                     </div>
                     <div class="document-body">
@@ -758,7 +757,7 @@
         <!-- Document Content Windows -->
         <div class="document-content" id="doc1Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>OPERATION_NEW_HOPE.dat</h2>
+            <h2>OPERATION_NEW_HOPE.dock</h2>
             <pre>
 ОПЕРАЦИЯ "НОВАЯ НАДЕЖДА" - СПИСОК ЛИЧНОСТЕЙ
 Дата: <span class="error-text">[ОТКРЫТЬ ДАННЫЕ НЕВОЗМОЖНО]</span>
@@ -777,10 +776,7 @@
 - "Shad" — **Выдан временный паспорт**
 - <span class="error-text">[ОШИБКА]</span> — <span class="error-text">[НЕТ ДАННЫХ]</span>
 
-<span class="error-text">ВНИМАНИЕ:</span>
-Все случаи связаны с делом "Фрактал" и проектом "Аватар". 
-По внутренним каналам ходит слух о проекте <span class="glitch-text">"Легион"</span>. 
-Если это правда, мы все под угрозой.
+Все случаи связаны с делом "Фрактал"
 
 <span class="error-text">[КОНЕЦ ДОКУМЕНТА]</span>
             </pre>
@@ -788,7 +784,7 @@
         
         <div class="document-content" id="doc2Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>SURVEILLANCE_ZONE_B17.log</h2>
+            <h2>SURVEILLANCE_ZONE_B17.dock</h2>
             <pre>
 ЖУРНАЛ НАБЛЮДЕНИЯ - ЗОНА B-17
 Зона наблюдения: <span class="glitch-text">[B-17]</span>
@@ -815,7 +811,7 @@
         
         <div class="document-content" id="doc3Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>FRACTAL_CASE_REQUEST.enc</h2>
+            <h2>FRACTAL_CASE_REQUEST.dock</h2>
             <pre>
 ЗАПРОС АРХИВНЫХ МАТЕРИАЛОВ
 КАТЕГОРИЯ: ВНУТРЕННЕЕ ИСПОЛЬЗОВАНИЕ
@@ -849,7 +845,7 @@
         
         <div class="document-content" id="doc4Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>LEAVE_REQUEST_CIRCLE.txt</h2>
+            <h2>LEAVE_REQUEST_CIRCLE.dock</h2>
             <pre>
 ЗАЯВЛЕНИЕ НА ОТПУСК
 КАТЕГОРИЯ: ВНУТРЕННИЙ ДОКУМЕНТ PAX
@@ -1087,23 +1083,19 @@
         <!-- Kain Interface -->
         <div class="main-interface" id="kainInterface">
             <div class="terminal-header">
-                <span>QUARANTINE_DATABASE_4.7.1 - ACCESS LEVEL: <span class="error-text">CONTAINMENT</span></span>
+                <span>PAX_TERMINAL.exe - ACCESS LEVEL: <span class="error-text">CONTAINMENT</span></span>
                 <button class="logout-btn" onclick="logout()">LOGOUT</button>
             </div>
             
             <div class="greeting">
-                <p>Добро пожаловать, <span class="glitch-text">Доктор Kain</span>.</p>
-                <p>Вы получили доступ к базе данных инфицированных субъектов.</p>
-                <p>Все субъекты классифицированы как <span class="error-text">КРАЙНЕ ОПАСНЫЕ</span>.</p>
-                <p>Ни при каких обстоятельствах не пытайтесь вступать в физический контакт.</p>
-                <p><span class="error-text">ПРЕДУПРЕЖДЕНИЕ:</span> Некоторые файлы могут содержать мемические опасности.</p>
+                <p>Добро пожаловать, К.Э.</p>
             </div>
             
             <div class="document-grid">
                 <div class="document kain-document" onclick="openKainDocument('kain1')">
                     <div class="document-header">
-                        <div class="document-icon">📞</div>
-                        <div class="document-title">FRACTAL_NEGOTIATIONS.wav</div>
+                        <div class="document-icon"></div>
+                        <div class="document-title">FRACTAL_NEGOTIATIONS.dock</div>
                         <div class="document-type">Audio Transcript</div>
                     </div>
                     <div class="document-body">
@@ -1119,8 +1111,8 @@
                 
                 <div class="document kain-document" onclick="openKainDocument('kain2')">
                     <div class="document-header">
-                        <div class="document-icon">👤</div>
-                        <div class="document-title">PERSONNEL_FILE_17B.enc</div>
+                        <div class="document-icon"></div>
+                        <div class="document-title">PERSONNEL_FILE_17B.dock</div>
                         <div class="document-type">Personnel Record</div>
                     </div>
                     <div class="document-body">
@@ -1136,8 +1128,8 @@
                 
                 <div class="document kain-document" onclick="openKainDocument('kain3')">
                     <div class="document-header">
-                        <div class="document-icon">🏢</div>
-                        <div class="document-title">ANOMALY_REPORT_IZ01.dat</div>
+                        <div class="document-icon"></div>
+                        <div class="document-title">ANOMALY_REPORT_IZ01.dock</div>
                         <div class="document-type">Field Report</div>
                     </div>
                     <div class="document-body">
@@ -1153,8 +1145,8 @@
                 
                 <div class="document kain-document" onclick="openKainDocument('kain4')">
                     <div class="document-header">
-                        <div class="document-icon">🏛️</div>
-                        <div class="document-title">MCD_ESTABLISHMENT.pdf</div>
+                        <div class="document-icon"></div>
+                        <div class="document-title">MCD_ESTABLISHMENT.dock</div>
                         <div class="document-type">Official Decree</div>
                     </div>
                     <div class="document-body">
@@ -1170,7 +1162,7 @@
                 
                 <div class="document kain-document" onclick="openGenesisDocumentIfUnlocked()">
                     <div class="document-header">
-                        <div class="document-icon">⚠️</div>
+                        <div class="document-icon"></div>
                         <div class="document-title">K.A. ANALYSIS.dock</div>
                         <div class="document-type">Ω-Archive</div>
                     </div>
@@ -1191,7 +1183,7 @@
         <!-- Kain Document Content Windows -->
         <div class="document-content" id="kain1Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>FRACTAL_NEGOTIATIONS.wav</h2>
+            <h2>FRACTAL_NEGOTIATIONS.dock</h2>
             <pre>
 РАСШИФРОВКА ПЕРЕГОВОРОВ - ПРОЕКТ "ФРАКТАЛ"
 ДАТА: <span class="redacted">██████</span>
@@ -1242,7 +1234,7 @@
         
         <div class="document-content" id="kain2Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>PERSONNEL_FILE_17B.enc</h2>
+            <h2>PERSONNEL_FILE_17B.dock</h2>
             <pre>
 ДОСЬЕ КАНДИДАТА - КАДРОВЫЙ ОТДЕЛ МОРО PAX
 КАТЕГОРИЯ: <span class="error-text">КОНФИДЕНЦИАЛЬНО</span>
@@ -1283,7 +1275,7 @@
         
         <div class="document-content" id="kain3Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>ANOMALY_REPORT_IZ01.dat</h2>
+            <h2>ANOMALY_REPORT_IZ01.dock</h2>
             <pre>
 ПОЛЕВОЙ ОТЧЁТ - АНОМАЛЬНЫЕ ПРОЯВЛЕНИЯ
 КАТЕГОРИЯ: <span class="error-text">ВНУТРЕННЕЕ ПОЛЕВОЕ СООБЩЕНИЕ</span>
@@ -1330,7 +1322,7 @@
         
         <div class="document-content" id="kain4Content">
             <button class="close-btn" onclick="closeDocument()">&times;</button>
-            <h2>MCD_ESTABLISHMENT.pdf</h2>
+            <h2>MCD_ESTABLISHMENT.dock</h2>
             <pre>
 ПОСТАНОВЛЕНИЕ СОВЕТА БЕЗОПАСНОСТИ
 КАТЕГОРИЯ: <span class="error-text">СЕКРЕТНО (ВНУТРЕННЕЕ ПОЛЬЗОВАНИЕ)</span>
@@ -2044,85 +2036,16 @@
     </div>
     
     <script type="module">
-        // Audio Context for sound effects only
-        let audioContext;
+        // Audio disabled
+        let audioContext = null;
         
-        // Initialize audio (no background ambient sound)
+        // Audio functions disabled
         function initAudio() {
-            try {
-                audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            } catch (e) {
-                console.log('Audio not supported');
-            }
+            // Audio disabled
         }
         
-        // Play document opening sound with variations
         function playDocumentSound(type = 'normal') {
-            if (!audioContext) return;
-            
-            try {
-                if (type === 'horror') {
-                    // Disturbing sound for horror documents
-                    const osc1 = audioContext.createOscillator();
-                    const osc2 = audioContext.createOscillator();
-                    const gain = audioContext.createGain();
-                    
-                    osc1.type = 'sawtooth';
-                    osc2.type = 'sine';
-                    osc1.frequency.setValueAtTime(80, audioContext.currentTime);
-                    osc2.frequency.setValueAtTime(120, audioContext.currentTime);
-                    
-                    gain.gain.setValueAtTime(0.3, audioContext.currentTime);
-                    gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 2);
-                    
-                    osc1.connect(gain);
-                    osc2.connect(gain);
-                    gain.connect(audioContext.destination);
-                    
-                    osc1.start();
-                    osc2.start();
-                    osc1.stop(audioContext.currentTime + 2);
-                    osc2.stop(audioContext.currentTime + 2);
-                } else if (type === 'glitch') {
-                    // Radio static/glitch sound
-                    const bufferSize = audioContext.sampleRate * 0.5;
-                    const buffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
-                    const data = buffer.getChannelData(0);
-                    
-                    for (let i = 0; i < bufferSize; i++) {
-                        data[i] = Math.random() * 2 - 1;
-                    }
-                    
-                    const source = audioContext.createBufferSource();
-                    const gain = audioContext.createGain();
-                    
-                    source.buffer = buffer;
-                    gain.gain.setValueAtTime(0.2, audioContext.currentTime);
-                    gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-                    
-                    source.connect(gain);
-                    gain.connect(audioContext.destination);
-                    source.start();
-                } else {
-                    // Normal access sound
-                    const osc = audioContext.createOscillator();
-                    const gain = audioContext.createGain();
-                    
-                    osc.type = 'triangle';
-                    osc.frequency.setValueAtTime(200, audioContext.currentTime);
-                    osc.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.3);
-                    
-                    gain.gain.setValueAtTime(0.2, audioContext.currentTime);
-                    gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-                    
-                    osc.connect(gain);
-                    gain.connect(audioContext.destination);
-                    osc.start();
-                    osc.stop(audioContext.currentTime + 0.3);
-                }
-            } catch (e) {
-                console.log('Audio error:', e);
-            }
+            // Audio disabled
         }
         
         // Cursor follower
@@ -2157,19 +2080,7 @@
                     document.body.classList.remove('flash-red');
                 }, 100);
                 
-                // Play error sound
-                if (audioContext) {
-                    const errorOsc = audioContext.createOscillator();
-                    const errorGain = audioContext.createGain();
-                    errorOsc.type = 'square';
-                    errorOsc.frequency.setValueAtTime(150, audioContext.currentTime);
-                    errorGain.gain.setValueAtTime(0.3, audioContext.currentTime);
-                    errorGain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-                    errorOsc.connect(errorGain);
-                    errorGain.connect(audioContext.destination);
-                    errorOsc.start();
-                    errorOsc.stop(audioContext.currentTime + 0.5);
-                }
+                // Audio disabled
             }
         };
         
@@ -2440,7 +2351,7 @@
         window.openGenesisDocumentIfUnlocked = function() {
             // Check if current time is past the deletion deadline (July 20, 2025 10:00 AM MSK)
             const now = new Date();
-            const deletionTime = new Date('2025-07-20T10:00:00+03:00'); // Moscow time (UTC+3)
+            const deletionTime = new Date('2025-07-30T10:00:00+03:00'); // Moscow time (UTC+3)
             
             if (now >= deletionTime) {
                 // Document has been "deleted"
@@ -2614,20 +2525,7 @@
                 }
             }, 200);
             
-            // Play dramatic crash sound
-            if (audioContext) {
-                const crashOsc = audioContext.createOscillator();
-                const crashGain = audioContext.createGain();
-                crashOsc.type = 'sawtooth';
-                crashOsc.frequency.setValueAtTime(80, audioContext.currentTime);
-                crashOsc.frequency.linearRampToValueAtTime(20, audioContext.currentTime + 2);
-                crashGain.gain.setValueAtTime(0.5, audioContext.currentTime);
-                crashGain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 2);
-                crashOsc.connect(crashGain);
-                crashGain.connect(audioContext.destination);
-                crashOsc.start();
-                crashOsc.stop(audioContext.currentTime + 2);
-            }
+            // Audio disabled
         }
         
         // Function to close crash overlay and logout
@@ -2742,27 +2640,7 @@
                 }
             }, 100);
             
-            // Play logout sound
-            try {
-                const logoutContext = new (window.AudioContext || window.webkitAudioContext)();
-                const logoutOsc = logoutContext.createOscillator();
-                const logoutGain = logoutContext.createGain();
-                logoutOsc.type = 'triangle';
-                logoutOsc.frequency.setValueAtTime(400, logoutContext.currentTime);
-                logoutOsc.frequency.exponentialRampToValueAtTime(200, logoutContext.currentTime + 0.5);
-                logoutGain.gain.setValueAtTime(0.3, logoutContext.currentTime);
-                logoutGain.gain.exponentialRampToValueAtTime(0.01, logoutContext.currentTime + 0.5);
-                logoutOsc.connect(logoutGain);
-                logoutGain.connect(logoutContext.destination);
-                logoutOsc.start();
-                logoutOsc.stop(logoutContext.currentTime + 0.5);
-                
-                setTimeout(() => {
-                    logoutContext.close();
-                }, 1000);
-            } catch (e) {
-                console.log('Audio not supported');
-            }
+            // Audio disabled
         };
         
         // Developer mode variables
@@ -2827,8 +2705,7 @@
                     if (devModeEnabled) {
                         protocolEditEnabled = true;
                         addConsoleMessage('Режим редактирования протоколов активирован.', '#ff0000');
-                        addConsoleMessage('Кнопка "Настройка доступа" добавлена к Genesis Protocol.', '#ff0000');
-                        addConsoleMessage('Кнопка находится под документом Genesis Protocol.', '#ff6600');
+                        addConsoleMessage('Кнопка "Настройка доступа" добавлена.', '#ff0000');
                         // Show the Genesis access button
                         const accessBtn = document.getElementById('genesisAccessBtn');
                         if (accessBtn) {
@@ -2841,41 +2718,6 @@
                     } else {
                         addConsoleMessage('ОШИБКА: Режим разработчика не активирован.', '#ff0000');
                     }
-                    break;
-                case 'deepnoise':
-                    addConsoleMessage('Accessing Project DeepNoise archives...', '#ff6600');
-                    addConsoleMessage('Инфразвуковые частоты обнаружены: 0.7-1.3 Гц', '#ff6600');
-                    addConsoleMessage('Субъект #447 последний раз видели в секторе 7', '#ff0000');
-                    break;
-                case 'circle':
-                    addConsoleMessage('Поиск информации о пользователе Circle...', '#ff6600');
-                    addConsoleMessage('Найдено: 1 активная сессия', '#00ff00');
-                    addConsoleMessage('Статус: Наблюдается', '#ff0000');
-                    addConsoleMessage('Примечание: Круг никогда не был завершен', '#ff0000');
-                    break;
-                case 'kain':
-                    addConsoleMessage('Доктор Kain - статус сотрудника', '#ff6600');
-                    addConsoleMessage('Отделение: Карантинные протоколы', '#ff6600');
-                    addConsoleMessage('Последний вход: СЕЙЧАС', '#00ff00');
-                    addConsoleMessage('Уровень допуска: БИООПАСНОСТЬ 4', '#ff0000');
-                    break;
-                case 'subject447':
-                    addConsoleMessage('ВНИМАНИЕ: Запрос информации о Субъекте #447', '#ff0000');
-                    addConsoleMessage('Доступ... ЗАПРЕЩЕН', '#ff0000');
-                    addConsoleMessage('Причина: Мемическая опасность', '#ff0000');
-                    addConsoleMessage('Если вы видите его, НЕ СМОТРИТЕ В ГЛАЗА', '#ff0000');
-                    break;
-                case 'genesis':
-                    addConsoleMessage('Genesis Protocol - статус проекта', '#ff0000');
-                    addConsoleMessage('Все субъекты: СБЕЖАЛИ', '#ff0000');
-                    addConsoleMessage('Изоляция: НАРУШЕНА', '#ff0000');
-                    addConsoleMessage('Рекомендация: БЕГИТЕ', '#ff0000');
-                    break;
-                case 'object7':
-                    addConsoleMessage('Объект 7 - статус объекта', '#ff0000');
-                    addConsoleMessage('Состояние: ЗАПЕЧАТАН', '#ff6600');
-                    addConsoleMessage('Но печати не работают...', '#ff0000');
-                    addConsoleMessage('Что-то движется внутри', '#ff0000');
                     break;
                 case 'exit':
                     addConsoleMessage('Выход невозможен', '#ff0000');
@@ -2925,7 +2767,7 @@
                 
                 // Show success message
                 const messageElement = document.getElementById('hiddenMessages');
-                messageElement.textContent = 'ДОСТУП К GENESIS PROTOCOL РАЗРЕШЕН';
+                messageElement.textContent = 'ДОСТУП РАЗРЕШЕН';
                 messageElement.style.opacity = '1';
                 messageElement.style.color = '#00ff00';
                 
@@ -2936,7 +2778,7 @@
                 
                 // Add console message if dev mode is enabled
                 if (devModeEnabled) {
-                    addConsoleMessage('Genesis Protocol разблокирован. Теперь вы можете открыть его.', '#00ff00');
+                    addConsoleMessage('Документ разблокирован. Теперь вы можете открыть его.', '#00ff00');
                 }
                 
                 // Play success sound
@@ -2987,20 +2829,7 @@
             // Start intense glitching
             startIntenseGlitching();
             
-            // Play horrifying sound
-            if (audioContext) {
-                const horrorOsc = audioContext.createOscillator();
-                const horrorGain = audioContext.createGain();
-                horrorOsc.type = 'sawtooth';
-                horrorOsc.frequency.setValueAtTime(50, audioContext.currentTime);
-                horrorOsc.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 3);
-                horrorGain.gain.setValueAtTime(0.3, audioContext.currentTime);
-                horrorGain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 3);
-                horrorOsc.connect(horrorGain);
-                horrorGain.connect(audioContext.destination);
-                horrorOsc.start();
-                horrorOsc.stop(audioContext.currentTime + 3);
-            }
+            // Audio disabled
         };
         
         // Countdown timer function
@@ -3010,7 +2839,7 @@
             
             const updateCountdown = () => {
                 const now = new Date();
-                const targetTime = new Date('2025-07-20T10:00:00+03:00'); // Moscow time (UTC+3)
+                const targetTime = new Date('2025-07-30T10:00:00+03:00'); // Moscow time (UTC+3)
                 const timeDiff = targetTime - now;
                 
                 if (timeDiff <= 0) {
